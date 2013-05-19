@@ -12,6 +12,6 @@ close all; clear all; clc;
   y_LocalConst = kernel_estimator(x, x_noise, y_noise, 3, 7);
   plot(x,y_LocalConst, 'r');
   hold on;
-  y_LocalLinear = kernel_localRegr(x, x_noise, y_noise, 3, 7);
+  y_LocalLinear = kernel_localRegr(x, x_noise, y_noise, 3, 3);
   plot(x,y_LocalLinear, 'b');
   hold on;
