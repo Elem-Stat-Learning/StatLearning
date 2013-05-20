@@ -1,8 +1,8 @@
 clear all; close all; clc;
   %load data 
-  load('../datasets/ex3data1.mat');
-  folds = stratifiedSamplingFolds(y, [0.3, 0.7], 0);
-  test_idx = cell2mat(folds(1, :));
-  train_idx = cell2mat(folds(2, :));
-  clear folds;
-%train and test on non-normalized features
+  data = load('../datasets/iris.data');
+  X = data(:, 1:4);
+  y = data(:, 5);
+  [pVals, classIds] = naive_bayes(X,y);
+  acc = sum(y == classIds')/length(y);
+  printf('Recognition accuracy %i percents\n', fix(acc * 100));

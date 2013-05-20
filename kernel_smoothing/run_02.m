@@ -9,7 +9,7 @@ close all; clear all; clc;
   endfor
   plot(x,y_ideal, 'g');
   hold on;
-  y_LocalConst = kernel_estimator(x, x_noise, y_noise, 3, 7);
+  y_LocalConst = kernel_estimator(x, x_noise, y_noise, 3, 7;)
   plot(x,y_LocalConst, 'r');
   hold on;
   A = eye(size(x_noise, 2), size(x_noise, 2));
