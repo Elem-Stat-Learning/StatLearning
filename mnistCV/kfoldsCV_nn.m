@@ -41,7 +41,7 @@ options = optimset('MaxIter', 50);
 
 lambdavals = (1:1:10);
 debug = true;
-lambda_num = size(lambdavals,1);
+lambda_num = size(lambdavals,2);
 errorVal = zeros(lambda_num, 2);
 
 for i=1:lambda_num
@@ -68,7 +68,7 @@ for i=1:lambda_num
     
     if (debug)
       fprintf('Test cost for labmda %i, fold № %i = %f\n',lambdavals(i), j,  cost_test);
-      fprintf('Test_Set Accuracy: %f\n', pred_acc_test * 100);
+      fprintf('Test set prediction accuracy: %f\n', pred_acc_test);
     endif
     errorVal(i,1) = errorVal(i,1) + cost_test;
     errorVal(i,2) = errorVal(i,2) + pred_err_test;
@@ -79,4 +79,7 @@ endfor
 
 %Choose the best lambda value
 [error_val, best_lambda_idx] = min(errorVal);
-fprintf('Best lambda value = %i with cost = %f', lambda(best_lambda_idx), error_val);
+fprintf('Best lambda value = %i with cost = %f', lambdavals(best_lambda_idx), error_val);
+if (debug)
+  errorVal
+endif
