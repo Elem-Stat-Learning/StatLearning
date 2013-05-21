@@ -75,6 +75,8 @@ for i=1:lambda_num
   endfor
   errorVal(i,1) = errorVal(i,1) / k;
   errorVal(i,2) = errorVal(i,2) / k;
+  fprintf('Mean test cost for labmda %i, = %f\n', lambdavals(i), errorVal(i,1));
+  fprintf('Mean test set prediction accuracy for lambda %i, = : %f\n', lambdavals(i), errorVal(i,2));
 endfor
 
 %Choose the best lambda value
