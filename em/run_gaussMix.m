@@ -1,0 +1,34 @@
+clear; close all; clc;
+first_x = 0;
+last_x = 6;
+steps_num = 50;
+x = linspace(first_x, last_x, steps_num);
+comp_num = 2;
+mu = first_x + (rand(1, comp_num) * (last_x - first_x));
+var = rand(1, comp_num);
+p = repmat(1/comp_num, 1, comp_num);
+printf('Calc density values for components\n');
+y = zeros(comp_num, steps_num);
+ynew = zeros(1, steps_num);
+for i = 1:comp_num
+  y(i,:) = normpdf(x,mu(1, i), var(1, i));
+endfor
+printf('Calc density values for mixture\n');
+ynew(1,:) = p(1,1) * y(1, :) + p(1,2) * y(2, :);
+printf('Plotting datasets\n');
+plot(x, y(1, :), 'r', x, y(2, :), 'g', x, ynew, 'b');
+randval = 0.001 +  (rand * (0.01 - 0.001));
+initParams = [p;mu;var];
+initParams = initParams + randval;
+printf('Program paused. Press enter to continue..');
+pause;
+clear y;
+close all;
+printf('Gauss mix expectation maximization in progress..\n');
+params = gaussMix_em(x, initParams, 2e-10);
+disp('Init params');
+disp(initParams - randval);
+disp('Calculated params');
+disp(params);
+ypred(1,:) = params(1,1) * normpdf(x, params(2, 1), params(3,1)) + params(1,2) * normpdf(x, params(2,2), params(3,2));
+plot(x, ynew, 'r', x, ypred, 'g');
