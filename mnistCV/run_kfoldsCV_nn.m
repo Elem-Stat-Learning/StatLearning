@@ -18,10 +18,7 @@ fprintf('Dividing dataset into %i folds ...\n', k);
 folds_ratio = repmat(1/k, 1, k);
 folds_idx = stratifiedSamplingFolds(y, folds_ratio);
 
-datasets_idx = [];
-for i=1:k
-  datasets_idx = [datasets_idx; cell2mat(folds_idx(i,:))];
-endfor
+datasets_idx = folds_idx;
 clear folds_idx;
 
 fprintf('Program paused. Press enter to continue.\n');

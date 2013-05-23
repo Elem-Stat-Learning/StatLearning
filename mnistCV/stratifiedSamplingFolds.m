@@ -16,4 +16,5 @@ function folds_idx = stratifiedSamplingFolds(y, folds_ratio)
       folds_idx(j,i) = class_idx(perm_idx(1:num));
     endfor
   endfor
+  folds_idx = cell2mat(folds_idx);
 end
