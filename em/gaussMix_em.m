@@ -32,7 +32,7 @@ function params =  gaussMix_em(x, init_params, tol)
       params(3, j) = sqrt(params(3,j));
     endfor
     counter = counter + 1;
-    fprintf('Iteration: %i, difference = %f\n', counter, t); 
+    fprintf(logfile, 'Iteration: %i, difference = %f\n', counter, t); 
   endwhile
   fclose(logfile);
 end
