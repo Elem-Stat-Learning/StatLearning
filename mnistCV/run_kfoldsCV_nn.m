@@ -16,7 +16,7 @@ m = size(X, 1);
 k = 5;
 fprintf('Dividing dataset into %i folds ...\n', k);
 folds_ratio = repmat(1/k, 1, k);
-folds_idx = stratifiedSamplingFolds(y, folds_ratio);
+folds_idx = stratifiedSamplingFolds(y, folds_ratio, 0);
 
 datasets_idx = folds_idx;
 clear folds_idx;
