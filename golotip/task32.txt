@@ -1,0 +1,109 @@
+GNU Octave, version 3.2.4
+Copyright (C) 2009 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type `warranty'.
+
+Octave was configured for "i486-pc-linux-gnu".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/help-wanted.html
+
+Report bugs to <bug@octave.org> (but first, please read
+http://www.octave.org/bugs.html to learn how to write a helpful report).
+
+For information about changes from previous versions, type `news'.
+
+Нормализуем (масштабируем) вектор признаков материала обучения
+X_train_norm =
+
+   0.20455   0.35377
+   0.34091   0.72877
+   0.84091   0.17689
+   1.00000   0.20991
+   0.50000   0.77594
+   0.96591   0.66274
+   0.05682   0.90094
+   0.52273   0.62500
+   0.18182   1.00000
+   0.80682   0.30896
+   0.75000   0.00000
+   0.42045   0.75708
+   0.00000   0.90802
+   0.10227   0.82783
+   0.42045   0.44104
+   0.07955   0.43868
+   0.46591   0.79009
+   0.68182   0.32547
+
+max_vals =
+
+   108.0000     1.4100
+
+min_vals =
+
+   196.0000     5.6500
+
+Зададим весовые коэффициенты каждого из свойств
+weights =
+
+   0.50000
+   0.50000
+
+Для каждого из образов вычисляем набор голотипов и радиусов
+cl_golotips =
+
+{
+  [1,1] =
+
+     0.52273   0.62500
+
+}
+
+cl_golorads =
+
+{
+  [1,1] =  0.55382
+}
+
+Нормализация тестовых данных
+Проверяем материал экзамена на принадлежность к каждому из классов
+Класс 1
+test_neighbs =
+
+   0.91960
+   0.75204
+   0.44854
+   0.60817
+   0.61021
+   0.88283
+   0.70551
+   0.76286
+   0.65427
+   0.71066
+   0.63797
+   0.91038
+   0.79685
+   0.42196
+   0.59284
+
+y =
+
+   1
+   1
+   0
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   0
+   1
+

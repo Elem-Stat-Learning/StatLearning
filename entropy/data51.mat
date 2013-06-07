@@ -1,0 +1,112 @@
+# Created by Octave 3.2.4, Sat Jun 08 01:21:42 2013 MSK <vadik@vadServer>
+# name: X_labels
+# type: string
+# elements: 2
+# length: 45
+Систолическое давление  
+# length: 45
+Диастолическое давление
+# name: X_test
+# type: matrix
+# rows: 6
+# columns: 2
+ 96 57
+ 139 75
+ 129 53
+ 148 68
+ 86 48
+ 93 60
+# name: X_train
+# type: matrix
+# rows: 36
+# columns: 2
+ 111 60
+ 115 66
+ 118 64
+ 108 65
+ 113 69
+ 108 62
+ 123 74
+ 119 63
+ 113 64
+ 102 75
+ 124 66
+ 119 68
+ 99 60
+ 83 48
+ 88 50
+ 82 48
+ 87 54
+ 80 51
+ 87 53
+ 98 54
+ 89 56
+ 91 47
+ 90 54
+ 88 47
+ 163 95
+ 229 98
+ 156 94
+ 175 104
+ 238 98
+ 187 105
+ 139 95
+ 201 100
+ 207 96
+ 210 100
+ 182 94
+ 137 94
+# name: ans
+# type: string
+# elements: 1
+# length: 30
+/usr/share/octave/packages/3.2
+# name: class_labels
+# type: string
+# elements: 3
+# length: 20
+здоров        
+# length: 20
+гипотоник  
+# length: 20
+гипертоник
+# name: y_train
+# type: matrix
+# rows: 36
+# columns: 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 3
+ 3
+ 3
+ 3
+ 3
+ 3
+ 3
+ 3
+ 3
+ 3
+ 3
+ 3
